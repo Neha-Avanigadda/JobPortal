@@ -36,10 +36,10 @@ A full-stack job portal application that enables job seekers and employers to co
 ---
 
 ## 📂 Project Structure
-job-portal/
- -frontend/ # React application
- -backend/ # Spring Boot application
- -README.md
+job-portal
+ - frontend/ # React application
+ - backend/ # Spring Boot application
+ - README.md
 
 ---
 
