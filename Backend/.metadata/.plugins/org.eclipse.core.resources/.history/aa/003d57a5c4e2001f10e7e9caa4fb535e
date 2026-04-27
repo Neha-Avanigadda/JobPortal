@@ -1,0 +1,19 @@
+package klu.model;
+
+import klu.repository.UsersRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
+public class UsersManager {
+
+    @Autowired
+    private UsersRepository UR;
+
+    public String addUser(Users U) {    
+        if (UR.validateEmail(U.getEmail()) > 0)
+            return "Email already exists";    
+        UR.save(U);
+        return "User Registered Successfully";
+    }
+}
